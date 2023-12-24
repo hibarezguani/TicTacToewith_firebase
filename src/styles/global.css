@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ajoutez ces styles à votre fichier CSS */
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.status {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #ddd;
+  margin-right: -1px;
+  margin-top: -1px;
+  cursor: pointer;
+}
+
+/* Styles spécifiques pour le composant Board lorsque le gagnant est déclaré */
+.board-row.winner {
+background-color: #4074d4; /* Rouge pour le gagnant */
+color: #ffffff; /* Texte en blanc pour un meilleur contraste */
+}
+
+/* Styles spécifiques pour les rangées non gagnantes */
+.board-row:not(.winner) {
+background-color: #4074d4; /* Bleu pour le non-gagnant */
+color: #ffffff; /* Texte en blanc pour un meilleur contraste */
+}
+
+.status.winner {
+color: #332a67; /* Rouge pour le texte du gagnant */
+background-color: #ffffff; /* Fond blanc pour le texte du gagnant */
+}
+/* Ajoutez ces styles à votre fichier CSS */
+
+
+
+.button-container {
+display: flex; /* Utilisez Flexbox pour aligner les éléments horizontalement */
+gap: 80px; /* Ajoutez un espace entre les éléments */
+}
+.medium-button {
+padding: 8px 16px; /* Ajustez les valeurs de padding pour définir la taille du bouton */
+font-size: 14px; /* Ajustez la taille de la police pour un bouton de taille moyenne */
+background-color: #4299e1; /* Couleur de fond du bouton */
+color: #ffffff; /* Couleur du texte du bouton */
+border: none;
+border-radius: 5px; /* Coins arrondis */
+cursor: pointer;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.medium-button:hover {
+background-color: #3182ce; /* Couleur de fond du bouton au survol */
+}
+
+
+
+body {
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+padding: 1.5rem;
+color: #ffffff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+background-color: #2f5b89; /* Couleur de fond de l'en-tête */
+z-index: 1000; /* Assurez-vous que l'en-tête est au-dessus de tout le contenu */
+}
+
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+
+ul {
+display: flex;
+gap: 1.5rem;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+li a {
+color: rgb(118, 175, 239);
+text-decoration: none;
+font-weight: bold;
+padding: 0.5rem 1rem;
+border: 2px solid transparent;
+border-radius: 0.25rem;
+transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Ajouter des styles spécifiques pour chaque lien */
+li#accueil a {
+border-color: #4299e1; /* Couleur de la bordure pour Accueil */
+}
+
+li#about a {
+border-color: #4299e1; /* Couleur de la bordure pour À propos */
+}
+
+li#game a {
+border-color: #4299e1; /* Couleur de la bordure pour Jouer au Tic Tac Toe */
+}
+
+li a:hover {
+color: #ffffff;
+background-color: #098af4;
+}
+body, html {
+height: 100%;
+margin: 0;
+}
+
+body {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+h1 {
+text-align: center;
+}
+h1 {
+@apply text-4xl font-bold mb-4 text-blue-500; /* Exemple de styles pour les titres */
+}
+
+p {
+@apply text-lg text-gray-600 mb-6; /* Exemple de styles pour les paragraphes */
+}
+/* global.css */
+/* global.css */
+.app {
+display: flex;
+flex-direction: column;
+height: 100vh;
+font-family: Arial, sans-serif;
+}
+
+.content {
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 1rem;
+}
+
+
+h1 {
+@apply text-4xl font-bold mb-4 text-blue-500; /* Styles pour le titre */
+}
+/* global.css */
+
+.background {
+  /* Ajoutez ici les propriétés de fond que vous souhaitez utiliser */
+  /* background-image: url('../../public/pic1.jpg'); */
+  background-size: cover; /* Ajuste la taille pour remplir la zone */
+  background-position: center; /* Centre l'image */
+  /* Autres styles pour remplir la page */
+  width: 100%;
+  height: 100vh;
+  /* Assurez-vous que le contenu ne dépasse pas la zone visible */
+  overflow: hidden;
+}
+html, body, #root, .app {
+  height: 100%;
+}
